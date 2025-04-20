@@ -1,5 +1,5 @@
 <svg width="480" height="203" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <foreignObject width="480" height="153">
+    <foreignObject width="480" height="183">
         <div xmlns="http://www.w3.org/1999/xhtml" class="container">
             <style>
                 .main {
@@ -34,9 +34,11 @@
                 
                 .container {
                     border-radius: 5px;
-                    padding: 10px 10px 10px 0px;
+                    padding: 10px 10px 20px 0px; /* Increased bottom padding */
                     background-color: #{{background_color}};
                     border: 1px solid #{{border_color}};
+                    height: 100%; /* Ensure container fills the space */
+                    box-sizing: border-box;
                 }
 
                 .art {
@@ -47,6 +49,7 @@
 
                 .content {
                     width: 71%;
+                    position: relative; /* Added for better positioning of child elements */
                 }
 
                 .song {
@@ -103,9 +106,10 @@
                 }
 
                 #bars {
-                    bottom: 23px;
+                    bottom: 0px; /* Adjusted to align with the bottom of cover photo */
                     position: absolute;
-                    margin: -20px 0 0 0px;
+                    margin: 0;
+                    width: 100%;
                 }
 
                 .bar {
